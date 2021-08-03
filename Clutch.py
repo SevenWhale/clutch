@@ -256,7 +256,7 @@ async def pfp(ctx, member: discord.Member=None):
 
 @bot.command()
 async def wallet(ctx, member: discord.Member):
-    cluster=MongoClient("mongodb+srv://Seven:Antonio2007@cluster.furnz.mongodb.net/database?retryWrites=true&w=majority")
+    cluster=MongoClient()
     db=cluster["cluster"]
     collection=db["economy"]
     author_id=ctx.author.id
@@ -284,7 +284,7 @@ async def wallet(ctx, member: discord.Member):
 @bot.command()
 @commands.cooldown(1, 3600*24, commands.BucketType.user)
 async def daily(ctx):
-    cluster=MongoClient("mongodb+srv://Seven:Antonio2007@cluster.furnz.mongodb.net/database?retryWrites=true&w=majority")
+    cluster=MongoClient()
     db=cluster["cluster"]
     collection=db["economy"]
     x=random.randint(500,1000)
@@ -303,7 +303,7 @@ async def daily(ctx):
 @bot.command()
 @commands.cooldown(1, 3600, commands.BucketType.user)
 async def work(ctx):
-    cluster=MongoClient("mongodb+srv://Seven:Antonio2007@cluster.furnz.mongodb.net/database?retryWrites=true&w=majority")
+    cluster=MongoClient()
     db=cluster["cluster"]
     collection=db["economy"]
     x=random.randint(100,600)
@@ -331,7 +331,7 @@ async def info(ctx):
 
 @bot.command()
 async def bet(ctx, suma):
-    cluster=MongoClient("mongodb+srv://Seven:Antonio2007@cluster.furnz.mongodb.net/database?retryWrites=true&w=majority")
+    cluster=MongoClient()
     db=cluster["cluster"]
     collection=db["economy"]
     author_id=ctx.author.id
@@ -451,7 +451,7 @@ async def bet_error(ctx, error):
 
 @bot.command()
 async def shop(ctx):
-    cluster = MongoClient("mongodb+srv://Seven:Antonio2007@cluster.furnz.mongodb.net/database?retryWrites=true&w=majority")
+    cluster = MongoClient()
     db = cluster["cluster"]
     collection = db["economy"]
     shop = db["shop"]
@@ -469,7 +469,7 @@ async def shop(ctx):
 
 @bot.command()
 async def buy(ctx, rol):
-    cluster=MongoClient("mongodb+srv://Seven:Antonio2007@cluster.furnz.mongodb.net/database?retryWrites=true&w=majority")
+    cluster=MongoClient()
     db=cluster["cluster"]
     collection=db["economy"]
     shop=db["shop"]
@@ -568,4 +568,4 @@ async def versiune(ctx):
     return
 
 
-bot.run('ODM4MzgyMDE4MTg1Mzk2MjQ0.YI6SGQ.QPLWwScyRXnmmCpUywYiNChYEuI')
+bot.run('')
