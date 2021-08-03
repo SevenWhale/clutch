@@ -1,2 +1,2 @@
-# clutch
-Source Code for the Clutch bot made in Python
+# Clutch
+Source Code for the Clutch BOT made in Python
